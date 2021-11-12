@@ -3,7 +3,6 @@ import { Application, log, send } from "./deps.ts";
 import api from "./api.ts";
 
 const app = new Application();
-
 const PORT = 8000;
 
 app.use(api.routes());
@@ -30,4 +29,3 @@ if (import.meta.main) {
     port: PORT,
   });
 }
-

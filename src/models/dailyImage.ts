@@ -17,7 +17,7 @@ const getDailyImage = async () => {
     },
   );
   if (!response.ok) {
-    throw new Error("THere was a problem downloading the data");
+    throw new Error("There was a problem downloading the data");
   }
 
   const data = await response.json();
@@ -30,6 +30,7 @@ const getDailyImage = async () => {
   };
 
   dailyImage.set(imageData.date, imageData);
+
   log.info(JSON.stringify(imageData));
 };
 
@@ -39,5 +40,3 @@ log.info(`Successfully downloaded data for APOD`);
 export function getApod() {
   return Array.from(dailyImage.values());
 }
-
-console.log(getApod());

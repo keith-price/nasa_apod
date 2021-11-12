@@ -1,5 +1,3 @@
-// this is just test code. Will build in framework, not sure which yet
-
 function apodData() {
 	const imgContainer = document.getElementById("img-container");
 	return fetch("/daily-image")
