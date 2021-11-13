@@ -1,3 +1,5 @@
+/* styling of images is a mess. Need to constrain in a container so that no matter the size of the image they are all displayed in a consistent way/and with same size */
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 *,
@@ -10,8 +12,9 @@
 
 body {
 	font-family: "Poppins", sans-serif;
-	width: 70vw;
+	width: 100vw;
 	height: 100vh;
+	overflow: hidden;
 	margin: 0 auto;
 	padding: 10px;
 	display: grid;
@@ -70,7 +73,6 @@ header ul li a {
 	width: 70%;
 	height: 70%;
 }
-
 .img-description {
 	width: 30%;
 	font-size: 1rem;
