@@ -82,8 +82,8 @@ header ul li a {
 	width: 35%;
 	font-family: "Domine", serif;
 	font-weight: 400;
-	line-height: 1.6;
-	font-size: 0.55rem;
+	/* line-height: 1.6; */
+	font-size: .75rem;
 	margin-left: 20px;
 }
 
