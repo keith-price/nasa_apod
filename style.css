@@ -1,7 +1,7 @@
 /* initial layput is aimed at small screen laptop  */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Domine&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Domine&display=swap");
 
 *,
 *::before,
@@ -14,6 +14,7 @@
 body {
 	font-family: "Poppins", sans-serif;
 	overflow-y: scroll;
+	overflow-x: hidden;
 	width: 100vw;
 	height: 100vh;
 	display: grid;
@@ -21,7 +22,6 @@ body {
 	background-color: black;
 	color: #fff;
 }
-
 
 header {
 	position: absolute;
@@ -80,10 +80,10 @@ header ul li a {
 /* need to get font and font weight/size correct */
 .img-description {
 	width: 35%;
-	font-family: 'Domine', serif;
+	font-family: "Domine", serif;
 	font-weight: 400;
 	line-height: 1.6;
-	font-size: .55rem;
+	font-size: 0.55rem;
 	margin-left: 20px;
 }
 
