@@ -1,4 +1,4 @@
-/* initial layput is aimed at small screen laptop  */
+/* initial layput is aimed at 1280 X 720  */
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Domine&display=swap");
@@ -62,7 +62,7 @@ header ul li a {
 }
 
 .img-title {
-	font-size: 1.25rem;
+	font-size: 2rem;
 	font-weight: 200;
 	margin: 2rem 0 1rem 0;
 }
@@ -82,7 +82,7 @@ header ul li a {
 	width: 35%;
 	font-family: "Domine", serif;
 	font-weight: 400;
-	/* line-height: 1.6; */
+	line-height: 1.6;
 	font-size: .75rem;
 	margin-left: 20px;
 }
