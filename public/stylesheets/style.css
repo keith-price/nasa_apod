@@ -11,8 +11,8 @@
 }
 
 body {
+
 	font-family: "Poppins", sans-serif;
-	overflow-y: scroll;
 	width: 100vw;
 	display: grid;
 	place-items: center;
@@ -55,6 +55,7 @@ header ul li a {
 
 #img-container {
 	width: 75%;
+
 }
 
 .img-title {
@@ -87,7 +88,7 @@ header ul li a {
 	right: 0;
 	bottom: 0;
 	min-width: 100vw;
-	/* min-height: 100vh; */
+	min-height: 100vh;
 	width: 100%;
 	z-index: -1;
 	opacity: 0.45;
