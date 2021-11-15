@@ -1,6 +1,6 @@
-/* styling of images is a mess. Need to constrain in a container so that no matter the size of the image they are all displayed in a consistent way/and with same size */
+/* initial layput is aimed at small screen laptop  */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
 
 *,
 *::before,
@@ -12,11 +12,10 @@
 
 body {
 	font-family: "Poppins", sans-serif;
+	overflow: hidden;
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
-	margin: 0 auto;
-	padding: 10px;
+
 	display: grid;
 	place-items: center;
 	background-color: black;
@@ -57,11 +56,11 @@ header ul li a {
 }
 
 #img-container {
-	width: 85%;
+	width: 75%;
 }
 
 .img-title {
-	font-size: 2rem;
+	font-size: 1rem;
 	margin: 2rem 0 1rem 0;
 }
 
@@ -71,21 +70,26 @@ header ul li a {
 
 .main-img {
 	width: 70%;
-	height: 70%;
+	height: 100%;
+	/* background-size: cover; */
 }
+
+/* need to get font and font weight/size correct */
 .img-description {
 	width: 30%;
-	font-size: 1rem;
-	line-height: 1.8;
-	margin-left: 25px;
+	font-weight: 100;
+	letter-spacing: 1.2px;
+	line-height: 1.7;
+	font-size: 8px;
+	margin-left: 15px;
 }
 
 #bg-video {
-	position: fixed;
+	position:fixed;
 	right: 0;
 	bottom: 0;
-	min-width: 100%;
-	min-height: 100%;
+	min-width: 100vw;
+	min-height: 100vh;
 	width: 100%;
 	z-index: -1;
 	opacity: 0.45;
