@@ -1,32 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="theme-color" content="#000000" />
+		<meta
+			name="description"
+			content="Web site created to display NASA's astronomy picture of the day"
+		/>
+		<link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <title>Astronomy Picture of the Day</title>
-</head>
+		<title>APOD</title>
+	</head>
 
-<header>
-  <p>Astronomy Picture of the Day</p>
-  <ul>
-    <li><a href="#">Archive</a></li>
-  </ul>
-</header>
-
-
-<body>
-  <script src="javascripts/script.js"></script>
-  <!-- content for #img-container to be rendered dynamically from api response -->
-  <div id="img-container"></div>
-
-  <video autoplay muted loop id="bg-video">
-    <source src="videos/video1-opt.mp4" type="video/mp4">
-  </video>
-
-
-</body>
-
+	<body>
+		<div id="root"></div>
+	</body>
 </html>
