@@ -7,57 +7,55 @@ function ImageComponent() {
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [imageData, setImageData] = useState([]);
 
-	useEffect(() => {
-		fetch("http://localhost:8000/daily-image")
-			.then((response) => response.json())
-			.then(
-				(data) => {
-					setIsLoaded(true);
-					setImageData(data);
-				},
-				(error) => {
-					setIsLoaded(true);
-					setError(error);
-				}
-			);
-	}, []);
-	console.log(imageData);
+	async function getImageData() {
+		const response = await fetch("http://localhost:8000/daily-image");
+		setImageData(await response.json());
+	}
 
-	// return <h1>Why is there no data?</h1>
+	useEffect(() => {
+		getImageData().then(
+			(data) => {
+				setIsLoaded(true);
+			},
+			(error) => {
+				setIsLoaded(false);
+				setError(error);
+			}
+		);
+	}, []);
 
 	if (error) {
-		return <div>Error: {error}</div>;
+		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
 		return <div>Loading...</div>;
 	} else {
-	}
-	if (imageData[0].url.includes("youtube")) {
-		return (
-			<>
-				<p className="img-title">${imageData[0].title}</p>
-				<div className="image-description-container">
-					<video className="main-img">
-						<source src={imageData[0].url} alt={imageData[0].title}></source>
-					</video>
-					<p className="img-description">{imageData[0].description}</p>
+		if (imageData[0].url.includes("youtube")) {
+			return (
+				<div className="img-container">
+					<p className="img-title">${imageData[0].title}</p>
+					<div className="image-description-container">
+						<video className="main-img">
+							<source src={imageData[0].url} alt={imageData[0].title}></source>
+						</video>
+						<p className="img-description">{imageData[0].description}</p>
+					</div>
 				</div>
-				`;
-			</>
-		);
-	} else {
-		return (
-			<>
-				<p className="img-title">{imageData[0].title}</p>
-				<div className="image-description-container">
-					<img
-						className="main-img"
-						src={imageData[0].url}
-						alt={imageData[0].title}
-					></img>
-					<p className="img-description">{imageData[0].description}</p>
+			);
+		} else {
+			return (
+				<div className="img-container">
+					<p className="img-title">{imageData[0].title}</p>
+					<div className="image-description-container">
+						<img
+							className="main-img"
+							src={imageData[0].url}
+							alt={imageData[0].title}
+						></img>
+						<p className="img-description">{imageData[0].description}</p>
+					</div>
 				</div>
-			</>
-		);
+			);
+		}
 	}
 }
 
