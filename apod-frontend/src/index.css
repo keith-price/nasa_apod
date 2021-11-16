@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Domine&display=swap");
+
+:root {
+	--main-font: "Poppins", sans-serif;
+	--secondary-font: "Domine", serif;
+}
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: var(--main-font);
+	overflow-y: scroll;
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background-color: black;
+	color: #fff;
+}

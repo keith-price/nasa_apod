@@ -18,7 +18,7 @@ app.use(async (ctx) => {
 
   if (fileWhiteList.includes(filePath)) {
     await send(ctx, filePath, {
-      root: `${Deno.cwd()}/public`,
+      root: `${Deno.cwd()}./apod-frontend/public`,
     });
   }
 });
