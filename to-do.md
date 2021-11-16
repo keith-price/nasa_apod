@@ -8,4 +8,4 @@
 
 4. Remove video, use gradient or other non-video background. Video not good for end user data use. Make sure background covers body at all sizes.
 
-5. Convert frontend to React
+5. Convert frontend to React (already added main components - layout needs work)

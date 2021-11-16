@@ -14,7 +14,7 @@ function ImageComponent() {
 
 	useEffect(() => {
 		getImageData().then(
-			(data) => {
+			() => {
 				setIsLoaded(true);
 			},
 			(error) => {
