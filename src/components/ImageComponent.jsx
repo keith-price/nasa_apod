@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { database, ref, set } from "../utils/firebase";
 
 import "./ImageComponent.css";
 
@@ -8,7 +9,9 @@ function ImageComponent() {
 	const [imageData, setImageData] = useState([]);
 
 	async function getImageData() {
-		const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff");
+		const response = await fetch(
+			"https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff"
+		);
 		setImageData(await response.json());
 	}
 
@@ -24,9 +27,17 @@ function ImageComponent() {
 		);
 	}, []);
 
-	console.log(imageData);
+	// writes data to Firebase - maybe need to move this into a separate file/component
+	async function writeImageData() {
+		const db = database;
+		await set(ref(db, "imagesData/" + imageData.date), {
+			url: imageData.url,
+			title: imageData.title,
+			explanation: imageData.explanation,
+		});
+	}
+	writeImageData();
 
-	// return <h1>Testing</h1>;
 
 	if (error) {
 		return <div>Error: {error.message}</div>;
