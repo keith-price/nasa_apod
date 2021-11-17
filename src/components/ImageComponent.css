@@ -9,7 +9,7 @@
 	margin: 5rem 0 1rem 0;
 }
 
-.image-description-container {
+.image-explanation-container {
 	display: flex;
 }
 
@@ -19,7 +19,7 @@
 }
 
 /* need to get font and font weight/size correct */
-.img-description {
+.img-explanation {
 	width: 60%;
 	font-family: var(--main-font);
 	font-weight: 400;

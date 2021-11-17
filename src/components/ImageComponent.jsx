@@ -8,7 +8,7 @@ function ImageComponent() {
 	const [imageData, setImageData] = useState([]);
 
 	async function getImageData() {
-		const response = await fetch("http://localhost:8000/daily-image");
+		const response = await fetch("https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff");
 		setImageData(await response.json());
 	}
 
@@ -24,34 +24,38 @@ function ImageComponent() {
 		);
 	}, []);
 
+	console.log(imageData);
+
+	// return <h1>Testing</h1>;
+
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
 		return <div>Loading...</div>;
 	} else {
-		if (imageData[0].url.includes("youtube")) {
+		if (imageData.url.includes("youtube")) {
 			return (
 				<div className="img-container">
-					<p className="img-title">${imageData[0].title}</p>
-					<div className="image-description-container">
+					<p className="img-title">${imageData.title}</p>
+					<div className="image-explanation-container">
 						<video className="main-img">
-							<source src={imageData[0].url} alt={imageData[0].title}></source>
+							<source src={imageData.url} alt={imageData.title}></source>
 						</video>
-						<p className="img-description">{imageData[0].description}</p>
+						<p className="img-explanation">{imageData.explanation}</p>
 					</div>
 				</div>
 			);
 		} else {
 			return (
 				<div className="img-container">
-					<p className="img-title">{imageData[0].title}</p>
-					<div className="image-description-container">
+					<p className="img-title">{imageData.title}</p>
+					<div className="image-explanation-container">
 						<img
 							className="main-img"
-							src={imageData[0].url}
-							alt={imageData[0].title}
+							src={imageData.url}
+							alt={imageData.title}
 						></img>
-						<p className="img-description">{imageData[0].description}</p>
+						<p className="img-explanation">{imageData.explanation}</p>
 					</div>
 				</div>
 			);
