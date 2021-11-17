@@ -1,4 +1,4 @@
-import { oakCors, Router } from "./deps.ts";
+import { oakCors,  Router,} from "./deps.ts";
 import * as image from "./models/dailyImage.ts";
 
 const router = new Router();
@@ -9,6 +9,7 @@ router.get("/", (ctx) => {
 
 router.get("/daily-image", oakCors(), (ctx) => {
   ctx.response.body = image.getApod();
+  
 });
 
 export default router;

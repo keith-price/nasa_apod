@@ -6,6 +6,7 @@ function Header() {
 			<p>Astronomy Picture of the Day</p>
 			<ul>
 				<li>
+				{/* add routing = link to archive page */}
 					<a href="#">Archive</a>
 				</li>
 			</ul>

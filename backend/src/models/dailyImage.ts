@@ -40,3 +40,5 @@ log.info(`Successfully downloaded data for APOD`);
 export function getApod() {
   return Array.from(dailyImage.values());
 }
+
+console.log(dailyImage);

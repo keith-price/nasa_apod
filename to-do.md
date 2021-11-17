@@ -6,6 +6,6 @@
 
 3. Focus on layout for small laptop.
 
-4. Remove video, use gradient or other non-video background. Video not good for end user data use. Make sure background covers body at all sizes.
+4. Convert frontend to React (already added main components - layout needs work)
 
-5. Convert frontend to React (already added main components - layout needs work)
+5. Store data locally in JSON format to test and in order to build out the archive page - later move this to a database (Firebase?)
