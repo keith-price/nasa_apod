@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { database, ref, set } from "../utils/firebase";
+import { db } from "../utils/firebase";
+import { doc, setDoc } from "@firebase/firestore";
 
 import "./ImageComponent.css";
 
@@ -21,23 +22,21 @@ function ImageComponent() {
 				setIsLoaded(true);
 			},
 			(error) => {
-				setIsLoaded(false);
+				setIsLoaded(true);
 				setError(error);
 			}
 		);
-	}, []);
-
-	// writes data to Firebase - maybe need to move this into a separate file/component
-	async function writeImageData() {
-		const db = database;
-		await set(ref(db, "imagesData/" + imageData.date), {
-			url: imageData.url,
-			title: imageData.title,
-			explanation: imageData.explanation,
-		});
-	}
-	writeImageData();
-
+		// document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
+		try {
+			setDoc(doc(db, "apodImageData", imageData.date), {
+				url: imageData.url,
+				title: imageData.title,
+				explanation: imageData.explanation,
+			});
+		} catch (e) {
+			console.error("Error adding document:  ", e);
+		}
+	}, [imageData.date, imageData.explanation, imageData.title, imageData.url]);
 
 	if (error) {
 		return <div>Error: {error.message}</div>;
