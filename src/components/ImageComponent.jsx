@@ -26,7 +26,6 @@ function ImageComponent() {
 				setError(error);
 			}
 		);
-		// document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
 		try {
 			setDoc(doc(db, "apodImageData", imageData.date), {
 				url: imageData.url,
@@ -36,6 +35,7 @@ function ImageComponent() {
 		} catch (e) {
 			console.error("Error adding document:  ", e);
 		}
+		// document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
 	}, [imageData.date, imageData.explanation, imageData.title, imageData.url]);
 
 	if (error) {
