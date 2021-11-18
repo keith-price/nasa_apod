@@ -1,17 +1,16 @@
-import './Header.css'
+import "./Header.css";
+import { Link } from "react-router-dom";
 
-function Header() {
+export default function Header() {
 	return (
 		<header>
 			<p>Astronomy Picture of the Day</p>
 			<ul>
 				<li>
-				{/* add routing = link to archive page */}
-					<a href="#">Archive</a>
+					<Link to="/">Home</Link>
+					<Link to="/archive">Archive</Link>
 				</li>
 			</ul>
 		</header>
 	);
 }
-
-export default Header;

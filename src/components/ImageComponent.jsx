@@ -4,7 +4,7 @@ import { doc, setDoc } from "@firebase/firestore";
 
 import "./ImageComponent.css";
 
-function ImageComponent() {
+export default function ImageComponent() {
 	const [error, setError] = useState();
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [imageData, setImageData] = useState([]);
@@ -73,4 +73,4 @@ function ImageComponent() {
 	}
 }
 
-export default ImageComponent;
+
