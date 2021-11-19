@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { db } from "../utils/firebase";
+import { db } from "../../utils/firebase";
 import { doc, setDoc } from "@firebase/firestore";
 
-import "./ImageComponent.css";
+import "./DailyImage.css";
 
 export default function ImageComponent() {
 	const [error, setError] = useState();

@@ -1,5 +1,5 @@
-import ArchiveComponent from "../components/ArchiveComponent";
+import Archive from "../components/Archive/Archive";
 
 export default function ArchivePage() {
-	return <ArchiveComponent />;
+	return <Archive />;
 }

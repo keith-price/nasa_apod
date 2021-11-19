@@ -1,5 +1,5 @@
-import ImageComponent from "../components/ImageComponent";
+import DailyImage from "../components/DailyImage/DailyImage";
 
 export default function DailyImagePage() {
-	return <ImageComponent />;
+	return <DailyImage />;
 }
