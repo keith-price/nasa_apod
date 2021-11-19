@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../utils/firebase";
+import ImageCard from "../ImageCard/ImageCard";
 
 import "./Archive.css";
 
 export default function ArchiveComponent() {
+	// remove uneeded constants
 	const [error, setError] = useState();
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [imageData, setImageData] = useState([]);
@@ -18,20 +20,41 @@ export default function ArchiveComponent() {
 		});
 		setImageData(tempStore);
 	}
+	return (
+		// needs to be rendered dynamically - just hard-coded to test
+		<div className="main-container-archive">
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+			<ImageCard />
+		</div>
+	);
 
-	useEffect(() => {
-		getImageData().then(
-			() => {
-				setIsLoaded(true);
-			},
-			(error) => {
-				setIsLoaded(true);
-				setError(error);
-			}
-		);
-	}, []);
+	// useEffect(() => {
+	// 	getImageData().then(
+	// 		() => {
+	// 			setIsLoaded(true);
+	// 		},
+	// 		(error) => {
+	// 			setIsLoaded(true);
+	// 			setError(error);
+	// 		}
+	// 	);
+	// }, []);
 
-	return <h1>Testing</h1>;
+	// need to render an ImageCard (import from ImageCard and use props for data) for each doc in imageData
 
 	// if (error) {
 	// 	return <div>Error: {error.message}</div>;
