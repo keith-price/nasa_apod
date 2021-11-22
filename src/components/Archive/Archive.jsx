@@ -50,38 +50,3 @@ export default function Archive() {
 		);
 	}
 }
-// need to render an ImageCard (import from ImageCard and use props for data) for each doc in imageData
-
-// if (error) {
-// 	return <div>Error: {error.message}</div>;
-// } else if (!isLoaded) {
-// 	return <div>Loading...</div>;
-// } else {
-// 	if (imageData.url.includes("youtube")) {
-// 		return (
-// 			<div className="img-container">
-// 				<p className="img-title">${imageData.title}</p>
-// 				<div className="image-explanation-container">
-// 					<video className="main-img">
-// 						<source src={imageData.url} alt={imageData.title}></source>
-// 					</video>
-// 					<p className="img-explanation">{imageData.explanation}</p>
-// 				</div>
-// 			</div>
-// 		);
-// 	} else {
-// 		return (
-// 			<div className="img-container">
-// 				<p className="img-title">{imageData.title}</p>
-// 				<div className="image-explanation-container">
-// 					<img
-// 						className="main-img"
-// 						src={imageData.url}
-// 						alt={imageData.title}
-// 					></img>
-// 					<p className="img-explanation">{imageData.explanation}</p>
-// 				</div>
-// 			</div>
-// 		);
-// 	}
-// }
