@@ -1,10 +1,17 @@
+.warp {
+	display: flex;
+}
+
+.archive-title {
+	margin-top: 6rem;
+	text-align: center;
+}
+
 .main-container-archive {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	flex-wrap: wrap;
 	gap: 2rem;
 	width: 100%;
-	height: auto;
-	margin-top: 5rem;
+	margin-top: 3rem;
 }
