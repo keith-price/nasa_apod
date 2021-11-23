@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-1. # Clicking on an image on the archive page should opens the image with full detail in the ArchiveDetailPage. Image should also be made full size by clicking on it within the ArchiveDetailPage
+1. # Need to figure out onClick - onClickHandler to get Link to open up ArchiveDetail + image-title to use for a get request.
 
 2. Add footer
 

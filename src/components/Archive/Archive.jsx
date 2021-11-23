@@ -4,6 +4,7 @@ import { db } from "../../utils/firebase";
 import ImageCard from "../ImageCard/ImageCard";
 
 import "./Archive.css";
+import { Link } from "react-router-dom";
 
 export default function Archive() {
 	const [error, setError] = useState();
@@ -30,7 +31,6 @@ export default function Archive() {
 			}
 		);
 	}, []);
-	
 
 	if (error) {
 		return <div>Error: {error.message}</div>;
@@ -42,8 +42,19 @@ export default function Archive() {
 				<div className="wrap">
 					<h1 className="archive-title">APOD Archive</h1>
 					<div className="main-container-archive">
-						{imageData.map((doc) => (
-							<ImageCard title={doc.title} url={doc.url} explanation={doc.explanation} key={doc.date} />
+						{imageData.map((doc, index) => (
+							<Link
+								to={"/archive-detail/" + index}
+								className="link"
+								state={{ from: imageData }}
+							>
+								<ImageCard
+									title={doc.title}
+									url={doc.url}
+									explanation={doc.explanation}
+									key={index}
+								/>
+							</Link>
 						))}
 					</div>
 				</div>

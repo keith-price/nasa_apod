@@ -1,7 +1,8 @@
 .card-container {
 	display: flex;
 	flex-direction: column;
-	width: 20%;
+	width: 100%;
+	height: 100%;
 }
 
 .card-img-title {
