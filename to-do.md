@@ -1,6 +1,6 @@
 <<<<<<< HEAD
 
-1. # Clicking on an image on the archive page should open a modal that shows the title, image and explanation (same as image component)
+1. # Clicking on an image on the archive page should opens the image with full detail in the ArchiveDetailPage. Image should also be made full size by clicking on it within the ArchiveDetailPage
 
 2. Add footer
 

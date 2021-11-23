@@ -30,6 +30,7 @@ export default function Archive() {
 			}
 		);
 	}, []);
+	
 
 	if (error) {
 		return <div>Error: {error.message}</div>;
@@ -42,7 +43,7 @@ export default function Archive() {
 					<h1 className="archive-title">APOD Archive</h1>
 					<div className="main-container-archive">
 						{imageData.map((doc) => (
-							<ImageCard title={doc.title} url={doc.url} key={doc.date} />
+							<ImageCard title={doc.title} url={doc.url} explanation={doc.explanation} key={doc.date} />
 						))}
 					</div>
 				</div>
