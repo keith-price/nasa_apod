@@ -35,7 +35,7 @@ export default function ImageComponent() {
 		} catch (e) {
 			console.error("Error adding document:  ", e);
 		}
-		// document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
+		// TODO: document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
 	}, [imageData.date, imageData.explanation, imageData.title, imageData.url]);
 
 	if (error) {

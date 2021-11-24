@@ -7,7 +7,6 @@ export default function Header() {
 			<p>Astronomy Picture of the Day</p>
 			<ul>
 				<li>
-					{/* APOD is the homepage but Home doesn't really explian what the page displays */}
 					<Link to="/">APOD</Link>
 					<Link to="/archive">APOD-Archive</Link>
 				</li>

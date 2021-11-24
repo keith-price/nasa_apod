@@ -2,36 +2,35 @@
 	margin-top: 6rem;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 
-.modal-img-container {
+.detail-img-container {
 	border-radius: 5px;
-
 	box-shadow: 0px 0px 8px 0.5px rgba(255, 255, 255, 0.171);
 	width: 80%;
 	padding: 3rem 6rem;
-	/* either background black or transparent and background blurs when modal opens */
-	background-color: rgba(0, 0, 0, 0.884);
+	background-color: rgb(0, 0, 0);
 }
 
-.modal-img-title {
+.detail-img-title {
 	font-size: 2rem;
 	font-weight: 200;
 	margin-bottom: 1rem;
 }
 
-.modal-image-explanation-container {
+.detail-image-explanation-container {
 	display: flex;
 }
 
-.modal-main-img {
+.detail-main-img {
 	width: 40%;
-	max-height: 40%;
+	height: 40%;
+	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
+	border-radius: 5px;
 }
 
 /* need to get font and font weight/size correct */
-.modal-img-explanation {
+.detail-img-explanation {
 	width: 60%;
 	font-family: var(--main-font);
 	font-weight: 400;

@@ -6,6 +6,8 @@
 	font-size: 2rem;
 }
 
+
+/* TODO: vertical images need to be flipped horizontally in order to be displayed consistently */
 .img-container {
 	margin: 0 auto;
 	width: 80%;
@@ -24,9 +26,11 @@
 .main-img {
 	width: 40%;
 	height: 40%;
+	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
+	border-radius: 5px;
 }
 
-/* need to get font and font weight/size correct */
+
 .img-explanation {
 	width: 60%;
 	font-family: var(--main-font);

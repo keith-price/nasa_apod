@@ -10,15 +10,15 @@ export default function ArchiveDetail() {
 	console.log(from)
 	return (
 		<div className="flex-container">
-			<div className="modal-img-container">
-			<p className="modal-img-title">{from[key].title}</p>
-			<div className="modal-image-explanation-container">
+			<div className="detail-img-container">
+			<p className="detail-img-title">{from[key].title}</p>
+			<div className="detail-image-explanation-container">
 				<img
-					className="modal-main-img"
+					className="detail-main-img"
 					src={from[key].url}
 					alt={from[key].title}
 				></img>
-				<p className="modal-img-explanation">{from[key].explanation}</p>
+				<p className="detail-img-explanation">{from[key].explanation}</p>
 			</div>
 		</div>
 		</div>
