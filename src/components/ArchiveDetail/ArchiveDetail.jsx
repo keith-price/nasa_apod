@@ -7,7 +7,7 @@ export default function ArchiveDetail() {
 	const params = useParams("archive-detail/:key")
 	const {key} = params
 
-	console.log(from)
+	// TODO: needs a 'back to archive' navigation
 	return (
 		<div className="flex-container">
 			<div className="detail-img-container">

@@ -1,7 +1,7 @@
 import "./ImageCard.css";
 
 export default function ImageCard(props) {
-	// checks for video as sometimes the daily data inclused a YouTube video
+	// checks for video because sometimes the daily data inclused a YouTube video
 	if (props.url.includes("youtube")) {
 		return (
 			<>

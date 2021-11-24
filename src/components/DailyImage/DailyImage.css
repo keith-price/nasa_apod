@@ -6,7 +6,6 @@
 	font-size: 2rem;
 }
 
-
 /* TODO: vertical images need to be flipped horizontally in order to be displayed consistently */
 .img-container {
 	margin: 0 auto;
@@ -29,7 +28,6 @@
 	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
 	border-radius: 5px;
 }
-
 
 .img-explanation {
 	width: 60%;

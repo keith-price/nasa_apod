@@ -38,6 +38,7 @@ export default function Archive() {
 		return <div>Loading...</div>;
 	} else {
 		return (
+			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection
 			<>
 				<div className="wrap">
 					<h1 className="archive-title">APOD Archive</h1>

@@ -8,17 +8,14 @@
 	height: 100%;
 	max-width: 15rem;
 	max-height: 15rem;
-	/* min-width: 12rem;
-	min-height: 12rem; */
 
 	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
 
 	border-radius: 5px;
-	/* margin-bottom: 3rem; */
 }
 
 .card-img-title {
-	font-size: 0.6rem;
+	font-size: 0.75rem;
 	font-weight: 400;
 	margin: 3rem 0 1rem 0;
 }
