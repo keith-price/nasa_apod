@@ -1,9 +1,5 @@
-.warp {
-	display: flex;
-}
-
 .archive-title {
-	margin-top: 4rem;
+	margin-top: 6rem;
 	text-align: center;
 }
 
@@ -11,11 +7,11 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 2.7rem;
 	width: 100%;
 	padding: 0 3rem;
-	margin-bottom: 6rem;
-	/* margin: 3rem 0 6rem 0; */
+
+	margin: 3rem 0 6rem 0;
 }
 
 .link {

@@ -40,24 +40,22 @@ export default function Archive() {
 		return (
 			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection
 			<>
-				<div className="wrap">
-					<h1 className="archive-title">APOD Archive</h1>
-					<div className="main-container-archive">
-						{imageData.map((doc, index) => (
-							<Link
-								to={"/archive-detail/" + index}
-								className="link"
-								state={{ from: imageData }}
-							>
-								<ImageCard
-									title={doc.title}
-									url={doc.url}
-									explanation={doc.explanation}
-									key={index}
-								/>
-							</Link>
-						))}
-					</div>
+				<h1 className="archive-title">APOD Archive</h1>
+				<div className="main-container-archive">
+					{imageData.map((doc, index) => (
+						<Link
+							to={"/archive-detail/" + index}
+							className="link"
+							state={{ from: imageData }}
+						>
+							<ImageCard
+								title={doc.title}
+								url={doc.url}
+								explanation={doc.explanation}
+								key={index}
+							/>
+						</Link>
+					))}
 				</div>
 			</>
 		);
