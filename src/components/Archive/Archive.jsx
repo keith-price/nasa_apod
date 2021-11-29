@@ -35,7 +35,7 @@ export default function Archive() {
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
-		return <div>Loading...</div>;
+		return <div className="loading">Loading...</div>;
 	} else {
 		return (
 			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection

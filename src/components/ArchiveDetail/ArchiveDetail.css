@@ -31,11 +31,30 @@
 
 /* need to get font and font weight/size correct */
 .detail-img-explanation {
-	width: 60%;
 	font-family: var(--main-font);
 	font-weight: 400;
 	line-height: 1.6;
 	letter-spacing: 1.2px;
 	font-size: 0.75rem;
 	margin-left: 2rem;
+}
+
+.img-btn-container {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	justify-content: space-between;
+}
+
+/* styling needs to be added. Not sure about color for button, shadow etc */
+.btn-back-archive {
+	width: fit-content;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+}
+
+.link-archive {
+	align-self: flex-end;
+	margin-top: 6rem;
 }
