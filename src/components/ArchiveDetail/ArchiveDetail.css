@@ -33,6 +33,12 @@
 	border-radius: 5px;
 }
 
+.detail-main-vid {
+	max-width: 100%;
+	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
+	border-radius: 5px;
+}
+
 /* need to get font and font weight/size correct */
 .detail-img-explanation {
 	font-family: var(--main-font);

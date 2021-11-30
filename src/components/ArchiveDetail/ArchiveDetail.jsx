@@ -1,4 +1,5 @@
 import { useLocation, useParams } from "react-router";
+import YouTubePlayer from "react-player/youtube";
 import { Link } from "react-router-dom";
 
 import "./ArchiveDetail.css";
@@ -22,11 +23,19 @@ export default function ArchiveDetail() {
 						className="modal-link"
 						state={{ from: modalData }}
 					>
-						<img
-							className="detail-main-img"
-							src={from[key].url}
-							alt={from[key].title}
-						></img>
+						{from[key].url.includes("youtube") ? (
+							<YouTubePlayer
+								className="detail-main-vid"
+								url={from[key].url}
+								alt={from[key].title}
+							/>
+						) : (
+							<img
+								className="detail-main-img"
+								src={from[key].url}
+								alt={from[key].title}
+							></img>
+						)}
 					</Link>
 
 					<div className="img-btn-container">

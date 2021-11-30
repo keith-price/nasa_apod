@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../utils/firebase";
+
 import ImageCard from "../ImageCard/ImageCard";
 
 import "./Archive.css";

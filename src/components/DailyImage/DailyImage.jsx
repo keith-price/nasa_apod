@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { db } from "../../utils/firebase";
 import { doc, setDoc } from "@firebase/firestore";
+import YouTubePlayer from "react-player/youtube";
 
 import "./DailyImage.css";
 
@@ -37,38 +38,41 @@ export default function ImageComponent() {
 		}
 		// TODO: document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
 	}, [imageData.date, imageData.explanation, imageData.title, imageData.url]);
-
+	console.log(imageData);
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
 		return <div className="loading">Loading...</div>;
 	} else {
-		if (imageData.url.includes("youtube")) {
-			return (
-				<div className="img-container">
-					<p className="img-title">${imageData.title}</p>
-					<div className="image-explanation-container">
-						<video className="main-img">
-							<source src={imageData.url} alt={imageData.title}></source>
-						</video>
-						<p className="img-explanation">{imageData.explanation}</p>
+		return (
+			<>
+				{imageData.url.includes("youtube") ? (
+					<div className="img-container">
+						<p className="img-title">${imageData.title}</p>
+						<div className="image-explanation-container">
+							<YouTubePlayer
+								className="main-img"
+								url={imageData.url}
+								alt={imageData.title}
+							/>
+
+							<p className="img-explanation">{imageData.explanation}</p>
+						</div>
 					</div>
-				</div>
-			);
-		} else {
-			return (
-				<div className="img-container">
-					<p className="img-title">{imageData.title}</p>
-					<div className="image-explanation-container">
-						<img
-							className="main-img"
-							src={imageData.url}
-							alt={imageData.title}
-						></img>
-						<p className="img-explanation">{imageData.explanation}</p>
+				) : (
+					<div className="img-container">
+						<p className="img-title">{imageData.title}</p>
+						<div className="image-explanation-container">
+							<img
+								className="main-img"
+								src={imageData.url}
+								alt={imageData.title}
+							></img>
+							<p className="img-explanation">{imageData.explanation}</p>
+						</div>
 					</div>
-				</div>
-			);
-		}
+				)}
+			</>
+		);
 	}
 }
