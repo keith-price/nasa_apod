@@ -10,9 +10,9 @@ export default function ImageCard(props) {
 				<>
 					<p className="card-img-title">{props.title}</p>
 					<div className="card-container">
+						{/* setting light='true' disables the video playing on click and allows the apps onClick() to redirect to next page. Doesn't display thumbnail though and just leaves an empty window with a play button*/}
 						<YouTubePlayer
-							// setting 'light' to false hides the video and only shows a play button. Would need to have a thumbnail behing. If this isn't set to 'light' then clicking on the video doesn't trigger the onClick instead it just playes the video inside the archive.
-							// light="false"
+							light="true"
 							className="vid-img"
 							url={props.url}
 							alt={props.title}
