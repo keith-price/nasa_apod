@@ -1,15 +1,8 @@
 .card-container {
+	display: flex;
 	background-color: rgba(0, 0, 0, 0);
-	width: 15rem;
-	height: 15rem;
 	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
 	border-radius: 5px;
-}
-
-.card-img-title {
-	font-size: 0.62rem;
-	font-weight: 400;
-	margin-bottom: 1rem;
 }
 
 .card-img {
@@ -19,5 +12,5 @@
 }
 .vid-img {
 	max-width: 15rem;
-	max-height: 15rem;
+	max-height: 10rem;
 }

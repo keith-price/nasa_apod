@@ -3,18 +3,24 @@
 	text-align: center;
 }
 
-.main-container-archive {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	gap: 2.7rem;
-	width: 100%;
-	padding: 0 3rem;
-
-	margin: 3rem 0 6rem 0;
-}
-
 .link {
 	text-decoration: none;
 	color: inherit;
+}
+
+/* need breakpoints to adjust max-width */
+.archive-masonry-grid {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	margin: 3rem auto 6rem auto;
+	max-width: 60rem;
+}
+.archive-masonry-grid_column {
+	padding-left: 30px; /* gutter size */
+	background-clip: padding-box;
+}
+
+.archive-masonry-grid_column > div {
+	margin-bottom: 30px;
 }

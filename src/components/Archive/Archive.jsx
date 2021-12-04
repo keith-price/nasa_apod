@@ -5,6 +5,7 @@ import { db } from "../../utils/firebase";
 import ImageCard from "../ImageCard/ImageCard";
 
 import "./Archive.css";
+import Masonry from "react-masonry-css";
 import { Link } from "react-router-dom";
 
 export default function Archive() {
@@ -33,6 +34,16 @@ export default function Archive() {
 		);
 	}, []);
 
+
+	// adjust cols for Masonry layout
+	const masonryBreakpoints = {
+		default: 4,
+		1100: 4,
+		700: 3,
+		500: 2
+	  };
+
+
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
@@ -42,22 +53,28 @@ export default function Archive() {
 			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection
 			<>
 				<h1 className="archive-title">APOD Archive</h1>
-				<div className="main-container-archive">
+				<Masonry
+					breakpointCols={masonryBreakpoints}
+					className="archive-masonry-grid"
+					columnClassName="archive-masonry-grid_column"
+				>
 					{imageData.map((doc, index) => (
-						<Link
-							to={"/archive-detail/" + index}
-							className="link"
-							state={{ from: imageData }}
-						>
-							<ImageCard
-								title={doc.title}
-								url={doc.url}
-								explanation={doc.explanation}
-								key={index}
-							/>
-						</Link>
+						<div>
+							<Link
+								to={"/archive-detail/" + index}
+								className="link"
+								state={{ from: imageData }}
+							>
+								<ImageCard
+									title={doc.title}
+									url={doc.url}
+									explanation={doc.explanation}
+									key={index}
+								/>
+							</Link>
+						</div>
 					))}
-				</div>
+				</Masonry>
 			</>
 		);
 	}

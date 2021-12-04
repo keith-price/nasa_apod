@@ -8,7 +8,7 @@ export default function ImageCard(props) {
 		<>
 			{props.url.includes("youtube") ? (
 				<>
-					<p className="card-img-title">{props.title}</p>
+					{/* <p className="card-img-title">{props.title}</p> */}
 					<div className="card-container">
 						{/* setting light='true' disables the video playing on click and allows the apps onClick() to redirect to next page. Doesn't display thumbnail though and just leaves an empty window with a play button*/}
 						<YouTubePlayer
@@ -21,7 +21,7 @@ export default function ImageCard(props) {
 				</>
 			) : (
 				<>
-					<p className="card-img-title">{props.title}</p>
+					{/* <p className="card-img-title">{props.title}</p> */}
 					<div className="card-container">
 						<img className="card-img" src={props.url} alt={props.title}></img>
 					</div>
