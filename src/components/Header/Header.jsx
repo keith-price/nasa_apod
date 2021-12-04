@@ -8,7 +8,7 @@ export default function Header() {
 			<ul>
 				<li>
 					<Link to="/">APOD</Link>
-					<Link to="/archive">Archive</Link>
+					<Link to="/archive">APOD Archive</Link>
 				</li>
 			</ul>
 		</header>
