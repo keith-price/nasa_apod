@@ -1,13 +1,12 @@
 .flex-container {
-	margin-top: 6rem;
-	display: flex;
-	justify-content: center;
+	margin: 6rem auto;
+	width: 80%;
 }
 
 .detail-img-container {
 	border-radius: 5px;
 	box-shadow: 0px 0px 8px 0.5px rgba(255, 255, 255, 0.171);
-	width: 80%;
+	width: 100%;
 	padding: 3rem 6rem;
 	background-color: rgb(0, 0, 0);
 }
