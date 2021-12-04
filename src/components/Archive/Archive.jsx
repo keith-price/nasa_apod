@@ -34,15 +34,13 @@ export default function Archive() {
 		);
 	}, []);
 
-
 	// adjust cols for Masonry layout
 	const masonryBreakpoints = {
 		default: 4,
 		1100: 4,
 		700: 3,
-		500: 2
-	  };
-
+		500: 2,
+	};
 
 	if (error) {
 		return <div>Error: {error.message}</div>;

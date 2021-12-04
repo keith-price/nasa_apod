@@ -1,5 +1,7 @@
 .card-container {
 	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: rgba(0, 0, 0, 0);
 	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
 	border-radius: 5px;
@@ -10,7 +12,8 @@
 	height: 100%;
 	border-radius: 5px;
 }
+
 .vid-img {
-	max-width: 15rem;
-	max-height: 10rem;
+	max-width: 15em;
+	max-height: 12.5em;
 }

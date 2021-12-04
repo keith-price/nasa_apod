@@ -10,11 +10,12 @@
 
 /* need breakpoints to adjust max-width */
 .archive-masonry-grid {
+	padding: 0 6rem;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin: 3rem auto 6rem auto;
-	max-width: 60rem;
+	margin: 3rem auto 6rem -30px;
+	width: auto;
 }
 .archive-masonry-grid_column {
 	padding-left: 30px; /* gutter size */
