@@ -39,6 +39,7 @@
 	margin-left: 2rem;
 }
 
+/* rough layout only, needs work and unused code to be removed */
 @media only screen and (max-width: 500px) {
 	.img-container {
 		width: 90%;
@@ -74,6 +75,5 @@
 		margin: 1.5rem 0 3rem 0;
 		padding: 1rem;
 		box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
-		
 	}
 }

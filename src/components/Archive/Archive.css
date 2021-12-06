@@ -25,3 +25,28 @@
 .archive-masonry-grid_column > div {
 	margin-bottom: 30px;
 }
+
+@media only screen and (max-width: 500px) {
+	.archive-title {
+		margin-top: 6rem;
+		text-align: center;
+	}
+
+	/* need breakpoints to adjust max-width */
+	.archive-masonry-grid {
+		padding: 0 2rem;
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		margin: 3rem auto 6rem -1.25rem;
+		width: auto;
+	}
+	.archive-masonry-grid_column {
+		padding-left: 1.25rem; /* gutter size */
+		background-clip: padding-box;
+	}
+
+	.archive-masonry-grid_column > div {
+		margin-bottom: 1.25rem;
+	}
+}
