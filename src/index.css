@@ -2,18 +2,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
 
 :root {
+	/* typography */
 	--main-font: "Poppins", sans-serif;
 	--secondary-font: "Orbitron", sans-serif;
-
-	--box-shadow-dark: 0 0 5px 0.5px rgb(0, 0, 0);
-
 	--text-color-light: #fff;
 	--text-color-dark: #000;
 	--line-height-copy: 1.5;
+	--line-height-title: 1.2;
 	--font-size-copy-mobile: 0.8rem;
 
-	--border-radius-main: 5px;
+	/* shadow */
+	--box-shadow-dark: 0 0 5px 0.5px rgb(0, 0, 0);
 
+	/* borders */
+	--border-radius-main: 5px;
 	--border-color-grey: 1px solid rgba(255, 255, 255, 0.267);
 }
 

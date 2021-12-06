@@ -81,6 +81,7 @@
 
 	.detail-img-title {
 		font-size: 1.6rem;
+		line-height: var(--line-height-title);
 	}
 
 	.detail-img-explanation {
