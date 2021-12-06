@@ -1,3 +1,10 @@
+.outer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
 .container-image {
 	display: flex;
 	margin: 6rem auto 0 auto;
@@ -13,13 +20,6 @@
 	width: 100%;
 }
 
-.outer {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 1.5rem;
-}
-
 .btn-back {
 	width: fit-content;
 	padding: 0.25rem 1rem;
@@ -31,4 +31,11 @@
 
 .btn-back:hover {
 	cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+	.container-image {
+		min-width: 100%;
+		border-radius: 5px;
+	}
 }
