@@ -2,18 +2,18 @@
 	margin: 3.5rem auto 0 auto;
 	width: 65%;
 	/* without this the border isn't always at the bottom but floats up - not sure if this is the best solution */
-	min-height:100vh;
+	min-height: 100vh;
 }
 
 .detail-img-container {
-	border-radius: 5px;
+	border-radius: var(--border-radius-main);
 	box-shadow: 0px 0px 8px 0.5px rgba(255, 255, 255, 0.171);
 	width: 100%;
 }
 
 .detail-img-title {
-	font-size: 2rem;
-	font-weight: 200;
+	font-size: 1.6rem;
+
 	margin-bottom: 1rem;
 	text-align: center;
 }
@@ -26,13 +26,13 @@
 .detail-main-img {
 	width: 100%;
 	box-shadow: var(--box-shadow-dark);
-	border-radius: 5px;
+	border-radius: var(--border-radius-main);
 }
 
 .detail-main-vid {
 	max-width: 100%;
 	box-shadow: var(--box-shadow-dark);
-	border-radius: 5px;
+	border-radius: var(--border-radius-main);
 }
 
 .detail-img-explanation {
@@ -40,7 +40,7 @@
 	font-weight: 400;
 	font-size: 0.75rem;
 	margin: 1rem;
-	line-height: 1.75;
+	line-height: var(--line-height-copy);
 	text-align: justify;
 }
 
@@ -57,7 +57,7 @@
 	padding: 0.5rem 1rem;
 	background-color: #000;
 	border: none;
-	border-radius: 5px;
+	border-radius: var(--border-radius-main);
 	margin-bottom: 1rem;
 }
 
@@ -73,7 +73,6 @@
 	.flex-container {
 		width: 90%;
 		margin: 4.5rem auto 0 auto;
-
 	}
 
 	.detail-img-container {
@@ -81,11 +80,12 @@
 	}
 
 	.detail-img-title {
-		font-size: 1.35rem;
+		font-size: 1.6rem;
 	}
 
 	.detail-img-explanation {
-		font-size: 0.75rem;
+		font-size: var(--font-size-copy-mobile);
+		line-height: var(--line-height-copy);
 		margin: 2rem 0;
 	}
 

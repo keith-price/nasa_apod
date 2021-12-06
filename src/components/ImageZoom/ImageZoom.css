@@ -6,19 +6,22 @@
 	min-height: 100vh;
 }
 
+/* currentrly image-zoom is smaller than the archive-detail image - this doesn't make sense */
 .container-image {
 	display: flex;
 	margin: 6rem auto 0 auto;
-	max-width: 40rem;
+
 	box-shadow: var(--box-shadow-dark);
+	border-radius: var(--border-radius-main);
 }
 
 .img-zoom {
-	width: 100%;
+	max-width: 100%;
+	border-radius: var(--border-radius-main);
 }
 
 .vid-zoom {
-	width: 100%;
+	max-width: 100%;
 }
 
 .btn-back {
@@ -30,16 +33,9 @@
 	background-color: #000;
 	color: var(--text-color-light);
 	border: none;
-	border-radius: 5px;
+	border-radius: var(--border-radius-main);
 }
 
 .btn-back:hover {
 	cursor: pointer;
-}
-
-@media only screen and (max-width: 500px) {
-	.container-image {
-		min-width: 100%;
-		border-radius: 5px;
-	}
 }
