@@ -24,4 +24,11 @@
 	width: fit-content;
 	padding: 0.25rem 1rem;
 	margin-bottom: 3rem;
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+}
+
+.btn-back:hover {
+	cursor: pointer;
 }

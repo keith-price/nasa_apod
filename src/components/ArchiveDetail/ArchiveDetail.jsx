@@ -11,7 +11,6 @@ export default function ArchiveDetail() {
 	const { key } = params;
 	let modalData = from[key].url;
 	console.log(modalData);
-	// TODO: need to add 'click to enlarge' for image, so that user can view larger image
 
 	return (
 		<div className="flex-container">
@@ -28,6 +27,8 @@ export default function ArchiveDetail() {
 								className="detail-main-vid"
 								url={from[key].url}
 								alt={from[key].title}
+								// shows native YouTube controls when set to 'true'. Allows the user to replay or go directly to YouTube
+								controls="true"
 							/>
 						) : (
 							<img
