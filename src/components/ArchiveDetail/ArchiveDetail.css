@@ -1,6 +1,8 @@
 .flex-container {
 	margin: 3.5rem auto 0 auto;
 	width: 65%;
+	/* without this the border isn't always at the bottom but floats up - not sure if this is the best solution */
+	min-height:100vh;
 }
 
 .detail-img-container {
