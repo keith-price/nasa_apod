@@ -43,4 +43,7 @@
 	.archive-masonry-grid_column > div {
 		margin-bottom: 1.25rem;
 	}
+	.archive-title {
+		margin-top: 5rem;
+	}
 }
