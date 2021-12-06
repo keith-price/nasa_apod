@@ -3,13 +3,14 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 1.5rem;
+	min-height: 100vh;
 }
 
 .container-image {
 	display: flex;
 	margin: 6rem auto 0 auto;
 	max-width: 40rem;
-	box-shadow: 0 0 5px 1px rgba(255, 255, 255, 0.178);
+	box-shadow: var(--box-shadow-dark);
 }
 
 .img-zoom {
@@ -26,11 +27,11 @@
 	font-family: inherit;
 	padding: 0.5rem 1rem;
 	margin-bottom: 3rem;
-	background-color: #fff;
+	background-color: #000;
+	color: var(--text-color-light);
 	border: none;
 	border-radius: 5px;
 }
-
 
 .btn-back:hover {
 	cursor: pointer;

@@ -1,4 +1,5 @@
 .archive-title {
+	color: var(--text-color-dark);
 	margin-top: 6rem;
 	text-align: center;
 }
@@ -30,7 +31,7 @@
 	/* need breakpoints to adjust max-width */
 	.archive-masonry-grid {
 		padding: 0 2rem;
-		margin: 3rem auto 6rem -1.25rem;
+		margin: 3rem auto 3rem -1.25rem;
 	}
 
 	.archive-masonry-grid_column {
