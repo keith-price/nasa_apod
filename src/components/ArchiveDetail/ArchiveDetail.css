@@ -63,27 +63,32 @@
 }
 
 @media only screen and (max-width: 500px) {
-	.flex-container {
-		width: 90%;
-		margin: 4.5rem auto 0 auto;
+	.detail-img-container {
+		margin: 1rem auto 0 auto;
+		max-width: 85%;
 	}
 
 	.detail-img-container {
-		padding: 1rem;
+		padding: 0 1rem;
 	}
 
 	.detail-img-title {
 		font-size: 1.6rem;
+		margin-bottom: 1rem;
 		line-height: var(--line-height-title);
+	}
+
+	.detail-main-img {
+		margin-bottom: 1rem;
 	}
 
 	.detail-img-explanation {
 		font-size: var(--font-size-copy-mobile);
 		line-height: var(--line-height-copy);
-		margin: 2rem 0;
+		margin: 0.5rem 0 3rem 0;
 	}
 
-	.link-archive {
-		margin: 0;
+	.btn-back-archive {
+		margin-bottom: 1rem;
 	}
 }
