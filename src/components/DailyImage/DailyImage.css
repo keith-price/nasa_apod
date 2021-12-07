@@ -61,7 +61,8 @@
 
 	.main-img {
 		max-width: 100%;
-		height: 100%;
+		/* attampt to fix image being stretched on ios */
+		height: 100% !important;
 		margin-bottom: 1rem;
 	}
 
