@@ -13,10 +13,10 @@ export default function ArchiveDetail() {
 	console.log(modalData);
 
 	return (
-		<div className="flex-container">
+		// <div className="flex-container">
 			<div className="detail-img-container">
 				<p className="detail-img-title">{from[key].title}</p>
-				<div className="detail-image-explanation-container">
+				{/* <div className="detail-image-explanation-container"> */}
 					<Link
 						to="/image-zoom"
 						className="modal-link"
@@ -46,7 +46,7 @@ export default function ArchiveDetail() {
 						</Link>
 					</div>
 				</div>
-			</div>
-		</div>
+			// </div>
+		// </div>
 	);
 }

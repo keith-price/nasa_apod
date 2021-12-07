@@ -1,45 +1,38 @@
-.flex-container {
-	margin: 3.5rem auto 0 auto;
-	width: 65%;
-	/* without this the border isn't always at the bottom but floats up - not sure if this is the best solution */
+.detail-img-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 6rem auto 0 auto;
+	max-width: 75%;
 	min-height: 100vh;
 }
 
-.detail-img-container {
-	border-radius: var(--border-radius-main);
-	box-shadow: 0px 0px 8px 0.5px rgba(255, 255, 255, 0.171);
-	width: 100%;
-}
-
 .detail-img-title {
-	font-size: 1.6rem;
-
-	margin-bottom: 1rem;
+	font-size: 2rem;
+	margin-bottom: 2rem;
 	text-align: center;
 }
 
-.detail-image-explanation-container {
-	display: flex;
-	flex-direction: column;
-}
-
 .detail-main-img {
-	width: 100%;
+	max-width: 100%;
+	max-height: 100vh;
 	box-shadow: var(--box-shadow-dark);
 	border-radius: var(--border-radius-main);
+	margin-bottom: 2rem;
 }
 
 .detail-main-vid {
 	max-width: 100%;
 	box-shadow: var(--box-shadow-dark);
 	border-radius: var(--border-radius-main);
+	margin-bottom: 2rem;
 }
 
 .detail-img-explanation {
 	font-family: var(--main-font);
-	font-weight: 400;
-	font-size: 0.75rem;
-	margin: 1rem;
+	font-size: 1rem;
+	margin: 1rem 0 3rem 0;
 	line-height: var(--line-height-copy);
 	text-align: justify;
 }
@@ -58,7 +51,7 @@
 	background-color: #000;
 	border: none;
 	border-radius: var(--border-radius-main);
-	margin-bottom: 1rem;
+	margin-bottom: 3rem;
 }
 
 .btn-back-archive:hover {

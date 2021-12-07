@@ -1,11 +1,10 @@
-
+/* desktop (large screens) first layout */
 
 .archive-title {
 	color: var(--text-color-dark);
-	margin-top: 4rem;
+	margin-top: 6rem;
 	text-align: center;
-	font-size: 1.6rem;
-
+	font-size: 2.25rem;
 }
 
 .link {
@@ -18,15 +17,20 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	margin: 6rem auto 6rem -30px;
-	width: auto;
+
+	margin: 3rem auto 6rem auto;
+	max-width: 75%;
 }
 .archive-masonry-grid_column {
-	padding-left: 30px; /* gutter size */
 	background-clip: padding-box;
 }
 
-.archive-masonry-grid_column > div {
+.archive-masonry-grid_column:not(:first-of-type) {
+	padding-left: 30px; /* gutter size */
+}
+
+/* not sure if this will correctly remove bottom margin - need to test as masonry grid grows */
+.archive-masonry-grid_column > div:not(:last-of-type) {
 	margin-bottom: 30px;
 }
 

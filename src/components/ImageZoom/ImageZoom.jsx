@@ -9,14 +9,12 @@ export default function ImageZoom() {
 	const location = useLocation();
 	const { from } = location.state;
 	return (
-		<div className="outer">
-			<div className="container-image">
-				{from.includes("youtube") ? (
-					<YouTubePlayer className="vid-zoom" url={from} alt="test" />
-				) : (
-					<img className="img-zoom" src={from} alt="test" />
-				)}
-			</div>
+		<div className="zoom-container">
+			{from.includes("youtube") ? (
+				<YouTubePlayer className="vid-zoom" url={from} alt="test" />
+			) : (
+				<img className="img-zoom" src={from} alt="test" />
+			)}
 
 			<button onClick={() => navigate(-1)} className="btn-back">
 				Back

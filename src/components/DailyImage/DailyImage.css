@@ -8,15 +8,15 @@
 
 /* TODO: vertical images need to be flipped horizontally in order to be displayed consistently */
 .img-container {
-	margin: 0 auto;
-	width: 80%;
+	margin: 6rem auto 0 auto;
+	max-width: 75%;
 	min-height: 100vh;
+	/* padding: 0 14rem; */
 }
 
 .img-title {
 	font-size: 2rem;
-
-	margin: 5rem 0 1rem 0;
+	margin-bottom: 1rem;
 }
 
 .image-explanation-container {
@@ -24,16 +24,14 @@
 }
 
 .main-img {
-	width: 40%;
-	height: 40%;
+	max-width: 60%;
 	box-shadow: var(--box-shadow-dark);
 	border-radius: var(--border-radius-main);
 }
 
 .img-explanation {
-	width: 60%;
+	max-width: 40%;
 	font-family: var(--main-font);
-
 	font-size: 1rem;
 	margin-left: 2rem;
 }
