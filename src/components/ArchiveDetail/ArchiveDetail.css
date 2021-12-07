@@ -3,7 +3,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 6rem auto 0 auto;
+	margin: 3rem auto 0 auto;
 	max-width: 75%;
 	min-height: 100vh;
 }
@@ -87,5 +87,4 @@
 		line-height: var(--line-height-copy);
 		margin: 0.5rem 0 3rem 0;
 	}
-
 }
