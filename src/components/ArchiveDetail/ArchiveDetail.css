@@ -3,15 +3,17 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 3rem auto 0 auto;
+	margin: 0 auto;
 	max-width: 75%;
 	min-height: 100vh;
 }
 
 .detail-img-title {
-	font-size: 1.5rem;
-	margin-bottom: 1.5rem;
-	text-align: center;
+	font-family: var(--display-font);
+	margin: 2rem 0;
+	font-size: 1rem;
+	line-height: var(--line-height-title);
+	align-self: flex-start;
 }
 
 .detail-main-img {
@@ -73,7 +75,6 @@
 
 @media only screen and (max-width: 500px) {
 	.detail-img-container {
-		margin: 1rem auto 0 auto;
 		max-width: 85%;
 	}
 
@@ -82,8 +83,8 @@
 	}
 
 	.detail-img-title {
-		font-size: 1.25rem;
-		margin-bottom: 1rem;
+		margin: 2rem 0 1rem 0;
+		font-size: 1.2rem;
 		line-height: var(--line-height-title);
 	}
 

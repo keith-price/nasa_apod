@@ -1,16 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Orbitron&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@400;600&display=swap");
 
 :root {
 	/* typography */
 	--main-font: "Poppins", sans-serif;
-	--secondary-font: "Orbitron", sans-serif;
+	--display-font: "Lexend Exa", sans-serif;
 	--text-color-light: #fff;
 	--text-color-dark: #000;
 	--line-height-copy: 1.5;
 	--line-height-title: 1.2;
 	--font-size-copy-mobile: 0.8rem;
 
+	/* NASA emblem colors */
+	--nasa-blue: #033a92;
+	--nasa-red: #fc3a1b;
+	--nasa-white: #ffffff;
 	/* shadow */
 	--box-shadow-dark: 0 0 5px 0.5px rgb(0, 0, 0);
 
@@ -30,7 +36,6 @@
 body {
 	height: 100vh;
 	font-family: var(--main-font);
-
 
 	background-color: #fff;
 	color: var(--text-color-dark);

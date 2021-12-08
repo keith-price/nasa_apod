@@ -16,8 +16,10 @@
 }
 
 .img-title {
+	font-family: var(--display-font);
 	font-size: 2rem;
 	margin-bottom: 1rem;
+	align-self: flex-start;
 }
 
 .image-explanation-container {
@@ -57,7 +59,6 @@
 @media only screen and (max-width: 500px) {
 	.img-container {
 		display: block;
-		position: relative;
 		max-width: 80%;
 	}
 
@@ -65,7 +66,6 @@
 		margin: 2rem 0;
 		font-size: 1.25rem;
 		line-height: var(--line-height-title);
-		text-align: center;
 	}
 
 	.image-explanation-container {

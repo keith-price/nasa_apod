@@ -1,4 +1,6 @@
 header {
+	font-family: var(--display-font);
+	font-weight: 600;
 	position: sticky;
 	top: 0;
 	left: 0;
@@ -38,24 +40,20 @@ header ul li a:not(:first-of-type) {
 
 /* need dropdown menu for header - main title centred */
 
-
 @media only screen and (max-width: 1200px) {
 	header {
 		font-size: 1.5rem;
 	}
-	
+
 	.header-container {
-	
 		width: 80%;
-		
 	}
 }
-
 
 @media only screen and (max-width: 500px) {
 	header {
 		height: 3rem;
-		font-size: 1.2rem;
+		font-size: 1.75rem;
 		width: 100%;
 	}
 

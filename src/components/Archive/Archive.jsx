@@ -50,7 +50,7 @@ export default function Archive() {
 		return (
 			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection
 			<>
-				<h1 className="archive-title">Archive</h1>
+				{/* <h1 className="archive-title">Archive</h1> */}
 				<Masonry
 					breakpointCols={masonryBreakpoints}
 					className="archive-masonry-grid"
