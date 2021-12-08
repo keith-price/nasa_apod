@@ -16,7 +16,7 @@
 
 	/* borders */
 	--border-radius-main: 5px;
-	--border-color-grey: 1px solid rgba(255, 255, 255, 0.267);
+	--border-color-black: 1px solid rgb(0, 0, 0);
 }
 
 *,
