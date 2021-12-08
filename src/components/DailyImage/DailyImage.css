@@ -38,12 +38,27 @@
 	margin-left: 2rem;
 }
 
+@media only screen and (max-width: 1200px) {
+	.img-container {
+		max-width: 80%;
+	}
+
+	.img-title {
+		font-size: 1.7rem;
+	}
+
+	.img-explanation {
+		font-size: 0.9rem;
+		margin-left: 2rem;
+	}
+}
+
 /* rough layout only, needs work and unused code to be removed */
 @media only screen and (max-width: 500px) {
 	.img-container {
 		display: block;
 		position: relative;
-		max-width: 85%;
+		max-width: 80%;
 	}
 
 	.img-title {

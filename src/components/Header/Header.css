@@ -1,8 +1,7 @@
 header {
-	/* position: fixed;
-
+	position: sticky;
 	top: 0;
-	left: 0; */
+	left: 0;
 	width: 100%;
 	height: 3rem;
 	background-color: #fff;
@@ -14,14 +13,12 @@ header {
 	color: var(--text-color-dark);
 }
 
-header p {
-	margin-left: 2rem;
-}
-
-header ul {
+.header-container {
+	margin: 0 auto;
+	width: 75%;
 	display: flex;
-	justify-content: flex-end;
-	margin-right: 2rem;
+	justify-content: space-between;
+	align-items: center;
 }
 
 header ul li {
@@ -29,29 +26,52 @@ header ul li {
 }
 
 header ul li a {
-	margin-left: 2rem;
+	/* margin-left: 2rem; */
 	text-decoration: none;
 	color: inherit;
 	font-family: inherit;
 }
 
+header ul li a:not(:first-of-type) {
+	margin-left: 2rem;
+}
+
 /* need dropdown menu for header - main title centred */
+
+
+@media only screen and (max-width: 1200px) {
+	header {
+		font-size: 1.5rem;
+	}
+	
+	.header-container {
+	
+		width: 80%;
+		
+	}
+}
+
+
 @media only screen and (max-width: 500px) {
 	header {
-		height: 4rem;
-
-		font-size: 1rem;
+		height: 3rem;
+		font-size: 1.2rem;
+		width: 100%;
 	}
 
 	header p {
-		margin-left: 0.5rem;
+		display: none;
 	}
 
-	header ul {
-		margin-right: 0.5rem;
+	.header-container {
+		margin: 0 auto;
+		width: 85%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	header ul li a {
-		margin-left: 0.5rem;
+	header ul li a:not(:first-of-type) {
+		margin-right: auto;
 	}
 }
