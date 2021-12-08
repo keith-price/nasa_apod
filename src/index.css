@@ -28,11 +28,10 @@
 }
 
 body {
-	
+	height: 100vh;
 	font-family: var(--main-font);
 	overflow-y: scroll;
 	overflow-x: hidden;
-
 
 	background-color: #fff;
 	color: var(--text-color-dark);
