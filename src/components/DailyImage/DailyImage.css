@@ -26,6 +26,7 @@
 
 .main-img {
 	max-width: 60%;
+	max-height: 100%;
 	box-shadow: var(--box-shadow-dark);
 	border-radius: var(--border-radius-main);
 }
@@ -62,7 +63,7 @@
 	.main-img {
 		max-width: 100%;
 		/* attampt to fix image being stretched on ios */
-		height: 100% !important;
+		max-height: 100% !important;
 		margin-bottom: 1rem;
 	}
 
