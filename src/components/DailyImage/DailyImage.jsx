@@ -48,7 +48,7 @@ export default function ImageComponent() {
 			<>
 				{imageData.url.includes("youtube") ? (
 					<div className="img-container">
-						<p className="img-title">${imageData.title}</p>
+						<p className="img-title">{imageData.title}</p>
 						<div className="image-explanation-container">
 							<YouTubePlayer
 								className="main-img"
