@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
+import { collection, getDocs, limit, query } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 
 import ImageCard from "../ImageCard/ImageCard";
