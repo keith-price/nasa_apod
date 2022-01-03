@@ -92,6 +92,12 @@
 		margin-bottom: 1rem;
 	}
 
+.detail-main-vid {
+	/* temp fix for image video size on mobile - YouTube player not diaplying correctly */
+	max-width: fit-content;
+	max-height: 180px;
+}
+
 	.detail-img-explanation {
 		font-size: var(--font-size-copy-mobile);
 		line-height: var(--line-height-copy);
