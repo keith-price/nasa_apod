@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, limit, orderBy, query } from "firebase/firestore";
 import { db } from "../../utils/firebase";
 
 import ImageCard from "../ImageCard/ImageCard";
@@ -14,8 +14,11 @@ export default function Archive() {
 	const [imageData, setImageData] = useState([]);
 
 	async function getArchive() {
+		const apodRef = collection(db, "apodImageData")		
+		// need to figure out orderBy to get in date most-recent order
+		const limitApod = query(apodRef, limit(35))
 		const tempStore = [];
-		const querySnapshot = await getDocs(collection(db, "apodImageData"));
+		const querySnapshot = await getDocs(limitApod);
 		querySnapshot.forEach((doc) => {
 			tempStore.push(doc.data());
 		});
