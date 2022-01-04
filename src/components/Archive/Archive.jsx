@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { collection, getDocs, limit, query } from "firebase/firestore";
+import {
+	collection,
+	getDocs,
+	limit,
+	orderBy,
+	query,
+	startAfter,
+} from "firebase/firestore";
 import { db } from "../../utils/firebase";
 
 import ImageCard from "../ImageCard/ImageCard";
@@ -8,21 +15,65 @@ import "./Archive.css";
 import Masonry from "react-masonry-css";
 import { Link } from "react-router-dom";
 
+let lastLoaded = null;
+
 export default function Archive() {
 	const [error, setError] = useState();
 	const [isLoaded, setIsLoaded] = useState(false);
 	const [imageData, setImageData] = useState([]);
 
 	async function getArchive() {
-		const apodRef = collection(db, "apodImageData")		
-		// need to figure out orderBy to get in date most-recent order
-		const limitApod = query(apodRef, limit(35))
 		const tempStore = [];
+		const apodRef = collection(db, "apodImageData");
+		// need to figure out orderBy to get in date most-recent order
+		const limitApod = query(apodRef, orderBy("title"), limit(20));
 		const querySnapshot = await getDocs(limitApod);
 		querySnapshot.forEach((doc) => {
 			tempStore.push(doc.data());
 		});
-		setImageData(tempStore);
+		if (tempStore.length > 0) {
+			setImageData(tempStore);
+
+			// lastLoaded = tempStore[tempStore.length -1]
+			lastLoaded = querySnapshot.docs[querySnapshot.docs.length - 1];
+		}
+	}
+
+	useEffect(() => {
+		getArchive().then(
+			() => {
+				setIsLoaded(true);
+			},
+			(error) => {
+				setIsLoaded(true);
+				setError(error);
+			}
+		);
+	}, []);
+
+	// maybe change to scrolling pagination - if keep paginated need back button
+	async function getArchiveNext() {
+		const tempStore = [];
+
+		const apodRef = collection(db, "apodImageData");
+		// need to figure out orderBy to get in date most-recent order
+		const limitApod = query(
+			apodRef,
+			orderBy("title"),
+			startAfter(lastLoaded || 0),
+			limit(20)
+		);
+
+		const querySnapshot = await getDocs(limitApod);
+		querySnapshot.forEach((doc) => {
+			tempStore.push(doc.data());
+		});
+		if (tempStore.length > 0) {
+			window.scrollTo(0, 0);
+			setImageData(tempStore);
+
+			lastLoaded = querySnapshot.docs[querySnapshot.docs.length - 1];
+		}
 	}
 
 	useEffect(() => {
@@ -51,9 +102,9 @@ export default function Archive() {
 		return <div className="loading">Loading...</div>;
 	} else {
 		return (
-			// TODO: Archive page needs 'paging'. Maximum number of images per page and ability to page through to the next collection
-			<>
+			<div className="archive-container">
 				{/* <h1 className="archive-title">Archive</h1> */}
+
 				<Masonry
 					breakpointCols={masonryBreakpoints}
 					className="archive-masonry-grid"
@@ -76,7 +127,11 @@ export default function Archive() {
 						</div>
 					))}
 				</Masonry>
-			</>
+
+				<button className="btnLoadNext" onClick={getArchiveNext}>
+					Test Button
+				</button>
+			</div>
 		);
 	}
 }

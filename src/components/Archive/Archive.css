@@ -1,5 +1,9 @@
 /* desktop (large screens) first layout */
 
+.archive-container {
+	min-height: 100vh;
+}
+
 .archive-title {
 	color: var(--text-color-dark);
 	margin-top: 3rem;
