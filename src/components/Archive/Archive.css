@@ -2,6 +2,8 @@
 
 .archive-container {
 	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 .archive-title {
@@ -36,6 +38,18 @@
 /* not sure if this will correctly remove bottom margin - need to test as masonry grid grows */
 .archive-masonry-grid_column > div:not(:last-of-type) {
 	margin-bottom: 30px;
+}
+
+.btnLoadNext {
+	color: var(--text-color-light);
+	width: 10rem;
+	font-family: inherit;
+	font-size: 1rem;
+	padding: 0.5rem 1rem;
+	background-color: #000;
+	border: none;
+	border-radius: var(--border-radius-main);
+	margin: 0 auto 3rem auto;
 }
 
 @media only screen and (max-width: 1200px) {

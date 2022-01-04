@@ -129,7 +129,7 @@ export default function Archive() {
 				</Masonry>
 
 				<button className="btnLoadNext" onClick={getArchiveNext}>
-					Test Button
+					Load More
 				</button>
 			</div>
 		);
