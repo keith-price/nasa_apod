@@ -49,7 +49,7 @@
 	background-color: #000;
 	border: none;
 	border-radius: var(--border-radius-main);
-	margin: 0 auto 3rem auto;
+	margin: 3rem auto;
 }
 
 @media only screen and (max-width: 1200px) {
