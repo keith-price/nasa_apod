@@ -3,17 +3,22 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	margin: 0 auto;
+	margin: 3rem auto 0 auto;
 	max-width: 75%;
 	min-height: 100vh;
 }
 
 .detail-img-title {
 	font-family: var(--display-font);
-	margin: 2rem 0;
-	font-size: 1rem;
+	margin: 2rem 0 1rem 0;
+	font-size: 1.25rem;
 	line-height: var(--line-height-title);
 	align-self: flex-start;
+}
+
+.modal-link {
+	text-decoration: none;
+	color: inherit;
 }
 
 .detail-main-img {
@@ -63,6 +68,8 @@
 .link-archive {
 	align-self: center;
 }
+
+
 
 @media only screen and (max-width: 1200px) {
 	.detail-img-container {
