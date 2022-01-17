@@ -78,6 +78,12 @@
 	.detail-img-explanation {
 		font-size: 0.9rem;
 	}
+
+	.detail-img-title {
+		text-decoration: none;
+		font-style: none;
+		
+	}
 }
 
 @media only screen and (max-width: 500px) {
