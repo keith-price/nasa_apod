@@ -14,10 +14,10 @@ export default function ArchiveDetail() {
 
 	return (
 		<div className="detail-img-container">
-			{/* <p className="detail-img-title">{from[key].title}</p> */}
+			<p className="detail-img-title">{from[key].title}</p>
 
 			<Link to="/image-zoom" className="modal-link" state={{ from: modalData }}>
-			<p className="detail-img-title">{from[key].title}</p>
+			
 				{from[key].url.includes("youtube") ? (
 					<YouTubePlayer
 						className="detail-main-vid"
