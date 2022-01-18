@@ -88,7 +88,7 @@
 
 @media only screen and (max-width: 500px) {
 	.detail-img-container {
-		max-width: 85%;
+		max-width: 90%;
 	}
 
 	.detail-img-container {
@@ -99,6 +99,7 @@
 		margin: 2rem 0 1rem 0;
 		font-size: 1.2rem;
 		line-height: var(--line-height-title);
+		text-align: center;
 	}
 
 	.detail-main-img {
