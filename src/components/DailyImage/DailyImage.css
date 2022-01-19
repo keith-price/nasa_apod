@@ -43,7 +43,7 @@
 
 @media only screen and (max-width: 1200px) {
 	.img-container {
-		max-width: 80%;
+		max-width: 85%;
 	}
 
 	.img-title {
@@ -53,6 +53,45 @@
 	.img-explanation {
 		font-size: 0.9rem;
 		margin-left: 2rem;
+	}
+}
+
+
+@media only screen and (max-width: 900px) {
+	.img-container {
+		display: block;
+		max-width: 80%;
+	}
+
+	.img-title {
+		margin: 2rem 0 1rem 0;
+		font-size: 1.5rem;
+		line-height: var(--line-height-title);
+		text-align: center;
+	}
+
+	.image-explanation-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.main-img {
+		width: 100%;
+		max-height: 100%;
+		margin-bottom: 1rem;
+	}
+
+	.img-explanation {
+		max-width: 100%;
+		border-radius: var(--border-radius-main);
+		text-align: justify;
+		font-size: 0.9rem;
+
+		line-height: var(--line-height-copy);
+		margin: 0 auto;
+		padding: 1rem;
 	}
 }
 

@@ -28,7 +28,7 @@ header ul li {
 }
 
 header ul li a {
-	/* margin-left: 2rem; */
+
 	text-decoration: none;
 	color: inherit;
 	font-family: inherit;
@@ -47,6 +47,35 @@ header ul li a:not(:first-of-type) {
 
 	.header-container {
 		width: 80%;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	header {
+		height: 3rem;
+		font-size: 1.75rem;
+		width: 100%;
+	}
+
+
+
+	header p {
+		display: none;
+	}
+
+	.header-container {
+		margin: 0 auto;
+		width: 85%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	header ul li a:not(:first-of-type) {
+		margin-right: auto;
+		margin-left: 6rem;
+	
+		
 	}
 }
 
@@ -71,5 +100,6 @@ header ul li a:not(:first-of-type) {
 
 	header ul li a:not(:first-of-type) {
 		margin-right: auto;
+		margin-left: 2rem;
 	}
 }

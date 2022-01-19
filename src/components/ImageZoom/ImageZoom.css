@@ -1,12 +1,16 @@
+body {
+	background-color: rgba(0, 0, 0, 0.096);
+}
+
 .zoom-container {
-	margin: 3rem auto 0 auto;
+	margin: 0 auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items:center;
+	align-items: center;
 	width: 65%;
 	min-height: 100vh;
-
+	/* background: rgba(0, 0, 0, 0.096); */
 }
 
 .img-zoom {
@@ -27,8 +31,8 @@
 	font-family: inherit;
 	padding: 0.5rem 1rem;
 	margin-bottom: 3rem;
-	background-color: #000;
-	color: var(--text-color-light);
+	background: rgba(0, 0, 0, 0.096);
+	color: var(--text-color-dark);
 	border: none;
 	border-radius: var(--border-radius-main);
 }
@@ -37,11 +41,23 @@
 	cursor: pointer;
 }
 
+@media only screen and (max-width: 1200px) {
+	.zoom-container {
+		width: 90%;
+		/* justify-content: space-around; */
+	}
+		
+}
+
 @media only screen and (max-width: 500px) {
 	.zoom-container {
-		margin: 1rem auto 0 auto;
+		margin: 0rem auto 0 auto;
 		width: 100%;
-		justify-content: space-around;
+		/* justify-content: space-around; */
+	}
+
+	.btn-back {
+		margin-top: 2rem;
 	}
 
 	.img-zoom {

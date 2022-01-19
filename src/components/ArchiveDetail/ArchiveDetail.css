@@ -10,7 +10,7 @@
 
 .detail-img-title {
 	font-family: var(--display-font);
-	margin: 2rem 0 3.5rem 0;
+	margin: 2rem 0 2rem 0;
 	font-size: 1.75rem;
 	align-self: center;
 	text-decoration: underline;
@@ -78,25 +78,51 @@
 	.detail-img-explanation {
 		font-size: 0.9rem;
 	}
+}
+
+@media only screen and (max-width: 900px) {
+	.detail-img-container {
+		display: block;
+		max-width: 85%;
+		margin: 3rem auto 0 auto;
+		padding: 0 1rem;
+	}
 
 	.detail-img-title {
+		margin: 0 0 1rem 0;
+		font-size: 1.5rem;
+		line-height: var(--line-height-title);
+		text-align: center;
 		text-decoration: none;
-		font-style: none;
-		
+	}
+
+	.detail-main-img {
+		width: 100%;
+		margin-bottom: 0 auto 1rem auto;
+	}
+
+	.detail-main-vid {
+		/* temp fix for image video size on mobile - YouTube player not diaplying correctly */
+		width: 100%;
+		height: auto;
+		margin: 0 auto 1rem auto;
+	}
+
+	.detail-img-explanation {
+		font-size: 0.9rem;
+		line-height: var(--line-height-copy);
+		margin: 0.5rem 0 3rem 0;
 	}
 }
 
 @media only screen and (max-width: 500px) {
 	.detail-img-container {
 		max-width: 90%;
-	}
-
-	.detail-img-container {
 		padding: 0 1rem;
 	}
 
 	.detail-img-title {
-		margin: 2rem 0 1rem 0;
+		margin: 0 0 1rem 0;
 		font-size: 1.2rem;
 		line-height: var(--line-height-title);
 		text-align: center;

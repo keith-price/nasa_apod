@@ -6,12 +6,12 @@
 	flex-direction: column;
 }
 
-.archive-title {
+/* .archive-title {
 	color: var(--text-color-dark);
 	margin-top: 3rem;
 	text-align: center;
 	font-size: 2rem;
-}
+} */
 
 .link {
 	text-decoration: none;
@@ -58,10 +58,31 @@
 	}
 }
 
+@media only screen and (max-width: 900px) {
+	.archive-masonry-grid {
+		padding: 0 3rem;
+		margin: 2.25rem auto 1rem auto;
+		max-width: 100%;
+	}
+
+	.archive-masonry-grid_column:not(:first-of-type) {
+		padding-left: 20px; /* gutter size */
+	}
+
+	/* not sure if this will correctly remove bottom margin - need to test as masonry grid grows */
+	.archive-masonry-grid_column > div:not(:last-of-type) {
+		margin-bottom: 20px;
+	}
+	.archive-title {
+		margin-top: 2rem;
+		font-size: 1.6rem;
+	}
+}
+
 @media only screen and (max-width: 500px) {
 	.archive-masonry-grid {
 		padding: 0 2rem;
-		margin: 2rem auto 1rem auto;
+		margin: 2.25rem auto 1rem auto;
 		max-width: 100%;
 	}
 
