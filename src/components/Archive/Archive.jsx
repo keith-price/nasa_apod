@@ -26,7 +26,7 @@ export default function Archive() {
 		const tempStore = [];
 		const apodRef = collection(db, "apodImageData");
 		// need to figure out orderBy to get in date most-recent order
-		const limitApod = query(apodRef, orderBy("title"), limit(20));
+		const limitApod = query(apodRef, orderBy("title"), limit(25));
 		const querySnapshot = await getDocs(limitApod);
 		querySnapshot.forEach((doc) => {
 			tempStore.push(doc.data());
