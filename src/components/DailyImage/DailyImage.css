@@ -122,6 +122,12 @@
 		margin-bottom: 1rem;
 	}
 
+	.main-vid {
+		max-width: max-content;
+		max-height: 180px;
+		margin-bottom: 1rem;
+	}
+
 	.img-explanation {
 		max-width: 100%;
 		border-radius: var(--border-radius-main);

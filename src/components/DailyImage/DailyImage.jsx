@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
-import { db } from "../../utils/firebase";
-import { doc, setDoc } from "@firebase/firestore";
-import YouTubePlayer from "react-player/youtube";
+import { useEffect, useState } from 'react';
+import { db } from '../../utils/firebase';
+import { doc, setDoc } from '@firebase/firestore';
+import YouTubePlayer from 'react-player/youtube';
 
-import "./DailyImage.css";
+import './DailyImage.css';
 
 export default function ImageComponent() {
 	const [error, setError] = useState();
@@ -12,7 +12,7 @@ export default function ImageComponent() {
 
 	async function getImageData() {
 		const response = await fetch(
-			"https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff"
+			'https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff'
 		);
 		setImageData(await response.json());
 	}
@@ -28,13 +28,13 @@ export default function ImageComponent() {
 			}
 		);
 		try {
-			setDoc(doc(db, "apodImageData", imageData.date), {
+			setDoc(doc(db, 'apodImageData', imageData.date), {
 				url: imageData.url,
 				title: imageData.title,
 				explanation: imageData.explanation,
 			});
 		} catch (e) {
-			console.error("Error adding document:  ", e);
+			console.error('Error adding document:  ', e);
 		}
 		// TODO: document is currently written to Cloud Firestore on every render. Needs to have a setTimeout or some kind of functionality that limits it to one write daily
 	}, [imageData.date, imageData.explanation, imageData.title, imageData.url]);
@@ -42,33 +42,33 @@ export default function ImageComponent() {
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
-		return <div className="loading">Loading...</div>;
+		return <div className='loading'>Loading...</div>;
 	} else {
 		return (
 			<>
-				{imageData.url.includes("youtube") ? (
-					<div className="img-container">
-						<p className="img-title">{imageData.title}</p>
-						<div className="image-explanation-container">
+				{imageData.url.includes('youtube') ? (
+					<div className='img-container'>
+						<p className='img-title'>{imageData.title}</p>
+						<div className='image-explanation-container'>
 							<YouTubePlayer
-								className="main-img"
+								className='main-vid'
 								url={imageData.url}
 								alt={imageData.title}
 							/>
 
-							<p className="img-explanation">{imageData.explanation}</p>
+							<p className='img-explanation'>{imageData.explanation}</p>
 						</div>
 					</div>
 				) : (
-					<div className="img-container">
-						<p className="img-title">{imageData.title}</p>
-						<div className="image-explanation-container">
+					<div className='img-container'>
+						<p className='img-title'>{imageData.title}</p>
+						<div className='image-explanation-container'>
 							<img
-								className="main-img"
+								className='main-img'
 								src={imageData.url}
 								alt={imageData.title}
 							></img>
-							<p className="img-explanation">{imageData.explanation}</p>
+							<p className='img-explanation'>{imageData.explanation}</p>
 						</div>
 					</div>
 				)}
