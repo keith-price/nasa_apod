@@ -12,7 +12,7 @@ export default function ImageComponent() {
 
 	async function getImageData() {
 		const response = await fetch(
-			'https://api.nasa.gov/planetary/apod?api_key=j4gWd4PrmFjZ0QzJw7hb33y9VOTbGPIxt7ecSxff'
+			`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}`
 		);
 		setImageData(await response.json());
 	}
