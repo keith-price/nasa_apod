@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import {
 	collection,
 	getDocs,
@@ -6,14 +6,14 @@ import {
 	orderBy,
 	query,
 	startAfter,
-} from "firebase/firestore";
-import { db } from "../../utils/firebase";
+} from 'firebase/firestore';
+import { db } from '../../utils/firebase';
 
-import ImageCard from "../ImageCard/ImageCard";
+import ImageCard from '../ImageCard/ImageCard';
 
-import "./Archive.css";
-import Masonry from "react-masonry-css";
-import { Link } from "react-router-dom";
+import './Archive.css';
+import Masonry from 'react-masonry-css';
+import { Link } from 'react-router-dom';
 
 let lastLoaded = null;
 
@@ -24,9 +24,9 @@ export default function Archive() {
 
 	async function getArchive() {
 		const tempStore = [];
-		const apodRef = collection(db, "apodImageData");
+		const apodRef = collection(db, 'apodImageData');
 		// need to figure out orderBy to get in date most-recent order
-		const limitApod = query(apodRef, orderBy("title"), limit(25));
+		const limitApod = query(apodRef, orderBy('title'), limit(25));
 		const querySnapshot = await getDocs(limitApod);
 		querySnapshot.forEach((doc) => {
 			tempStore.push(doc.data());
@@ -55,11 +55,11 @@ export default function Archive() {
 	async function getArchiveNext() {
 		const tempStore = [];
 
-		const apodRef = collection(db, "apodImageData");
+		const apodRef = collection(db, 'apodImageData');
 		// need to figure out orderBy to get in date most-recent order
 		const limitApod = query(
 			apodRef,
-			orderBy("title"),
+			orderBy('title'),
 			startAfter(lastLoaded || 0),
 			limit(20)
 		);
@@ -99,22 +99,22 @@ export default function Archive() {
 	if (error) {
 		return <div>Error: {error.message}</div>;
 	} else if (!isLoaded) {
-		return <div className="loading">Loading...</div>;
+		return <div className='loading'>Loading...</div>;
 	} else {
 		return (
-			<div className="archive-container">
+			<div className='archive-container'>
 				{/* <h1 className="archive-title">Archive</h1> */}
 
 				<Masonry
 					breakpointCols={masonryBreakpoints}
-					className="archive-masonry-grid"
-					columnClassName="archive-masonry-grid_column"
+					className='archive-masonry-grid'
+					columnClassName='archive-masonry-grid_column'
 				>
 					{imageData.map((doc, index) => (
 						<div>
 							<Link
-								to={"/archive-detail/" + index}
-								className="link"
+								to={'/archive-detail/' + index}
+								className='link'
 								state={{ from: imageData }}
 							>
 								<ImageCard
@@ -128,7 +128,7 @@ export default function Archive() {
 					))}
 				</Masonry>
 
-				<button className="btnLoadNext" onClick={getArchiveNext}>
+				<button className='btnLoadNext' onClick={getArchiveNext}>
 					Load More
 				</button>
 			</div>

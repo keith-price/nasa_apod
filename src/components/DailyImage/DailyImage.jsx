@@ -11,12 +11,12 @@ export default function ImageComponent() {
 	const [imageData, setImageData] = useState([]);
 
 	async function getImageData() {
-		const response = await fetch(
-			`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}`
-		);
+		const response = await fetch(`/.netlify/functions/apodFetch`);
+		// const response = await fetch(
+		// 	`https://api.nasa.gov/planetary/apod?api_key=${process.env.REACT_APP_APOD_API_KEY}`
+		// );
 		setImageData(await response.json());
 	}
-	
 
 	useEffect(() => {
 		getImageData().then(
