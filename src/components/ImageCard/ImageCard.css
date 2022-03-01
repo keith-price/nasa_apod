@@ -17,6 +17,8 @@
 }
 
 .vid-img {
+	/* stops the link from opening up in Youtube and instead correctly redirects to the archive detail page */
+	pointer-events: none;
 	width: 100%;
 	max-height: 12.5rem;
 }
