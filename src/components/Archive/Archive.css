@@ -50,6 +50,7 @@
 	border: none;
 	border-radius: var(--border-radius-main);
 	margin: 3rem auto;
+	cursor: pointer;
 }
 
 @media only screen and (max-width: 1200px) {
