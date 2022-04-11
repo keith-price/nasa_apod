@@ -13,6 +13,7 @@ header {
 	font-size: 1.5rem;
 	border-bottom: var(--border-color-black);
 	color: var(--text-color-dark);
+	z-index: 100;
 }
 
 .header-container {
