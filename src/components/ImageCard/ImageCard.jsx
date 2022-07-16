@@ -2,7 +2,7 @@ import YouTubePlayer from 'react-player/youtube';
 import './ImageCard.css';
 
 export default function ImageCard(props) {
-	// checks for video because sometimes the daily data inclused a YouTube video
+	// checks for video because sometimes the daily data includes a YouTube video
 
 	return (
 		<>
